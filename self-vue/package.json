@@ -7,7 +7,8 @@
     "doc": "doc"
   },
   "scripts": {
-    "build": "webpack --mode production --config ./config/webpack.config.js --progress"
+    "build": "webpack --mode production --config ./config/webpack.config.js --progress",
+    "test": "mocha --reporter mochawesome --require babel-core/register"
   },
   "author": "lulin",
   "license": "ISC",
@@ -16,7 +17,11 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "chai": "^4.2.0",
     "clean-webpack-plugin": "^0.1.19",
+    "eslint": "^5.9.0",
+    "mocha": "^5.2.0",
+    "mochawesome": "^3.1.1",
     "webpack": "^4.1.1",
     "webpack-cli": "^3.1.2"
   }

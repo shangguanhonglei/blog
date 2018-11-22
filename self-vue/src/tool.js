@@ -6,19 +6,19 @@ class Tool {
    */
   static getValueFromObject(data, target_key){
     var target
-    if (!isObject(data)) {
+    if (!Tool.isObject(data)) {
       return
     }
     var dataKeys = Object.keys(data)
     for (var i = 0, len = dataKeys.length; i < len; i++) {
       var item = data[dataKeys[i]]
-      if (!isObject(item)) {
+      if (!Tool.isObject(item)) {
         if (dataKeys[i] === target_key) {
           target = item
           break
         }
       } else {
-        target = getValueFromObject(item, target_key)
+        target = Tool.getValueFromObject(item, target_key)
       }
     }
     return target
@@ -28,7 +28,7 @@ class Tool {
    * @param {*} data 
    */
   static isObject(data){
-    return Object.prototype.toString.call(data) === '[object Object]' && Object.keys(data).length
+    return !!(Object.prototype.toString.call(data) === '[object Object]' && Object.keys(data).length)
   }
   /**
    * 检测节点是否是元素节点

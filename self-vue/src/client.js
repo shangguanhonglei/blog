@@ -30,10 +30,10 @@ class Vue {
         enumerable: false,
         configurable: true,
         get: function getter() {
-          return self.data[key];
+          return self.data[key]
         },
         set: function setter(newVal) {
-          self.data[key] = newVal;
+          self.data[key] = newVal
         }
       })
     })

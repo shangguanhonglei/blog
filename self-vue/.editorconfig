@@ -1,0 +1,16 @@
+# 当前目录是根目录
+root = true
+# 应用于所有文件
+[*]
+# 文件的编码
+charset = utf-8
+# 缩略类型：tab、space
+indent_style = space
+# 缩进几个单元
+indent_size = 4
+# 换行符，lf、cr和crlf(暂时不知道是干嘛的)
+end_of_line = lf
+# 在使文件以一个空白行结尾
+insert_final_newline = true
+# 除去行尾的任意空白字符
+trim_trailing_whitespace = true
