@@ -1,0 +1,23 @@
+{
+  "name": "vue-observer",
+  "version": "1.0.0",
+  "description": "\u001b[A\u001b[B\u001b[A\u001b[B\u001b[A\u001b[B\u001b[A\u001b[B\u001b[A\u001b[B\u001b[A\u001b[vue双向绑定",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "build": "webpack --mode production --config ./config/webpack.config.js --progress"
+  },
+  "author": "lulin",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
