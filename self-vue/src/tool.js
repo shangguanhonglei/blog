@@ -42,8 +42,7 @@ class Tool {
    * @param {*} node
    */
   static isTextNode(node){
-    //return !!(node && node.nodeType === 3)
-    return false
+    return !!(node && node.nodeType === 3)
   }
 }
 export default Tool
