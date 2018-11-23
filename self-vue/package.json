@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "webpack --mode production --config ./config/webpack.config.js --progress",
-    "test": "mocha --reporter mochawesome --require babel-core/register"
+    "test": "mocha --reporter mochawesome  --require babel-core/register"
   },
   "author": "lulin",
   "license": "ISC",
