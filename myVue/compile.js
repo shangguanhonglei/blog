@@ -1,11 +1,10 @@
 import Tool from './tool.js'
 import Subscribe from './subscribe.js'
-import Reg from './config/regular.js'
 class Compile {
   /**
    * 构造函数
-   * @param {*} node 
-   * @param {*} data 
+   * @param {*} node
+   * @param {*} data
    */
   constructor(node, data){
     this.data = data
@@ -21,7 +20,7 @@ class Compile {
   }
   /**
    * 将dom节点添加到frament中
-   * @param {*} node 
+   * @param {*} node
    */
   nodeToFragment(node){
     var frament = document.createDocumentFragment()
@@ -34,7 +33,7 @@ class Compile {
   }
   /**
    * 解析节点node以及指令
-   * @param {*} el 
+   * @param {*} el
    */
   compileElement(el) {
     var childNodes = el.childNodes
@@ -44,8 +43,8 @@ class Compile {
       if (Tool.isElementNode(node)) {
         self.compile(node)
       }
-      else if (Tool.isTextNode(node) && Reg.TEMPLATE_REG.test(text)) {
-        self.compileText(node, text.match(Reg.TEMPLATE_REG)[1])
+      else if (Tool.isTextNode(node) && /\{\{(.+)\}\}/.test(text)) {
+        self.compileText(node, text.match(/\{\{(.+)\}\}/)[1])
       }
       if (node.childNodes && node.childNodes.length) {
         self.compileElement(node)
@@ -54,7 +53,7 @@ class Compile {
   }
   /**
    * 除了{{name}}指令实现其他指令
-   * @param {*} node 
+   * @param {*} node
    */
   compile(node) {
     var nodeAttrs = node.attributes
@@ -75,8 +74,8 @@ class Compile {
   }
   /**
    * 具体监听dom和数据
-   * @param {*} node 
-   * @param {*} exp 
+   * @param {*} node
+   * @param {*} exp
    */
   compileText(node, exp) {
     var self = this
@@ -117,23 +116,23 @@ class Compile {
   }
   /**
    * 更新表单value值
-   * @param {*} node 
-   * @param {*} value 
+   * @param {*} node
+   * @param {*} value
    */
   modelUpdater(node, value) {
     node.value = typeof value === void 0 ? '' : value
   }
   /**
    * 更新节点内容
-   * @param {*} node 
-   * @param {*} value 
+   * @param {*} node
+   * @param {*} value
    */
   updateText(node, value) {
     node.textContent = typeof value === void 0 ? '' : value
   }
   /**
    * 判断是否是指令
-   * @param {*} attr 
+   * @param {*} attr
    */
   isDirective(attr) {
     return attr.indexOf('v-') === 0

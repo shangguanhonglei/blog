@@ -3,7 +3,7 @@ import Compile from './compile.js'
 class Vue {
   /**
    * 构造函数
-   * @param {*} options 
+   * @param {*} options
    */
   constructor(options){
     var self = this
@@ -39,4 +39,4 @@ class Vue {
     })
   }
 }
-export default Vue
+window.vue = Vue

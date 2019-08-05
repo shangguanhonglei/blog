@@ -1,6 +1,0 @@
-node_modules/
-dist/
-mochawesome-report/
-package-lock.json
-.DS_Store
-images/.DS_Store
