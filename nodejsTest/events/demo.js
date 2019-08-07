@@ -18,3 +18,12 @@ myEmitter.on('my_event_params',function(a,b){
 setTimeout(()=>{
   myEmitter.emit('my_event_params',1,2)
 },2000)
+//使用 eventEmitter.once() 可以注册最多可调用一次的监听器
+let m = 0;
+myEmitter.once('my_event_once', () => {
+  console.log(++m);
+});
+myEmitter.emit('my_event_once');
+// 打印: 1
+myEmitter.emit('my_event_once');
+// 不触发

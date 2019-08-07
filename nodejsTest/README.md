@@ -38,4 +38,5 @@ setTimeout(function() {
 ```
 **setTimeout/setImmediate/process.nextTick的区别**  
 > 三者都是异步执行回调函数，只是执行顺序不同。可能是setTimeout回调函数执行结果在前，也可能是setImmediate回调函数执行结果在前，但setTimeout回调函数执行结果在前的概率更大些。这是因为他们采用的观察者不同，setTimeout采用的是类似IO观察者，setImmediate采用的是check观察者，而process.nextTick()采用的是idle观察者。  
-***三种观察者的优先级顺序是：idle观察者>>io观察者>check观察者***
+***三种观察者的优先级顺序是：idle观察者>io观察者>check观察者***  
+点击[链接](https://github.com/shangguanhonglei/blog/blob/master/nodejsTest/events/test.js)查看执行代码
