@@ -1,20 +1,14 @@
-//事件触发器
-const EventEmitter = require('events')
-class MyEmitter extends EventEmitter {}
-const myEmitter = new MyEmitter()
-myEmitter.on('my_event',()=>{
-  console.log('触发事件 my_event')
-}) 
-setTimeout(()=>{
-  myEmitter.emit('my_event')
-},2000)
-
-
-//将参数和this传给监听器
-//监听器使用箭头函数，this关键词不会指向myEmitter
-myEmitter.on('my_event_params',function(a,b){
-  console.log(a,b,this,this===myEmitter)
+//process.nextTick()与setImmediate()和setTimeout()的区别如下：
+//三种观察者的优先级顺序是：idle观察者>>io观察者>check观察者
+//执行结果顺序为1=>5=>4=>2=>3也有可能是1=>5=>4=>3=>2
+console.log('1')
+setTimeout(function(){
+    console.log('2')
 })
-setTimeout(()=>{
-  myEmitter.emit('my_event_params',1,2)
-},2000)
+setImmediate(function(){
+    console.log('3')
+})
+process.nextTick(function(){
+  console.log('4')
+})
+console.log('5')
