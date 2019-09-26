@@ -1,0 +1,22 @@
+{
+  "name": "learnflow",
+  "version": "1.0.0",
+  "description": "学习flow静态js文件类型检测",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/ -d lib/",
+    "prepublish": "npm run build",
+    "flow": "flow"
+  },
+  "author": "tianll",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-flow": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.6.2",
+    "flow-bin": "^0.108.0"
+  }
+}
