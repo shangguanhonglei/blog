@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas</title>
+</head>
+
+<body>
+  <canvas id="canvas" width="800" height="200"></canvas>
+</body>
+<script>
+function draw() {
+  var ctx = document.getElementById('canvas').getContext('2d');
+  ctx.font = "48px serif";
+  ctx.fillText("Hello world", 10, 50);
+}
+draw()
+</script>
+
+</html>
