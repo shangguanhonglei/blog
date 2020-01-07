@@ -28,7 +28,7 @@ const db = require('./db')
 //多对多关系表精准查询，类似于系统登录逻辑
 //const state = "select a.username,b.grade,c.cname,c.credit from users a left join grade b on a.uid = b.uid left join credit c on b.cid = c.cid where a.username = 'tianlei' and a.password = '123456'"
 //利用正则表达式进行匹配
-//const state = "select username from users where username regexp '2$'"
+const state = "select username from users where username regexp '2$'"
 db.query(state).then((res)=>{
   console.log(res)
 })
