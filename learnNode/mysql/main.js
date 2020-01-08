@@ -28,7 +28,27 @@ const db = require('./db')
 //多对多关系表精准查询，类似于系统登录逻辑
 //const state = "select a.username,b.grade,c.cname,c.credit from users a left join grade b on a.uid = b.uid left join credit c on b.cid = c.cid where a.username = 'tianlei' and a.password = '123456'"
 //利用正则表达式进行匹配
-const state = "select username from users where username regexp '2$'"
+//const state = "select username from users where username regexp '2$'"
+//事务开始(此为模拟sql语句，node mysql插件不支持这种形式)
+//const state = "begin"
+//const state = "INSERT INTO `employee_tbl` VALUES ('7', '小雷', '2016-04-04 15:26:54', '7')"
+//const state = "rollback"
+//const state = "commit"
+//const state = "alter table testalter_tbl drop i"
+//const state = "show columns from testalter_tbl"
+//const state = "alter table testalter_tbl add a int"
+//将指定字段插入到第一个位置
+//const state = "alter table testalter_tbl add i int first"
+//将指定字段插入到指定字段后面
+//const state = "alter table testalter_tbl add j int after c"
+//修改字段类型
+//const state = "alter table testalter_tbl modify c char(10)"
+//修改字段名
+//const state = "alter table testalter_tbl change j test bigint"
+//修改字段默认值
+//const state = "alter table testalter_tbl alter i set default 1000"
+//const state = "alter table testalter_tbl rename to alter_tbl"
+const state = ""
 db.query(state).then((res)=>{
   console.log(res)
 })
