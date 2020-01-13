@@ -48,7 +48,19 @@ const db = require('./db')
 //修改字段默认值
 //const state = "alter table testalter_tbl alter i set default 1000"
 //const state = "alter table testalter_tbl rename to alter_tbl"
-const state = ""
+//给数据表某个字段建立索引
+//const state = "CREATE INDEX index_username ON users(username(32))"
+//const state = "ALTER table users ADD INDEX index_phone(phone)"
+//const state = "DROP INDEX [index_username] ON users"
+//const state = "CREATE UNIQUE INDEX indexName ON users(username(length)) "
+//建立临时表
+//const state = "CREATE TEMPORARY TABLE SalesSummary(product_name VARCHAR(50) NOT NULL,total_sales DECIMAL(12,2) NOT NULL DEFAULT 0.00,avg_unit_price DECIMAL(7,2) NOT NULL DEFAULT 0.00,total_units_sold INT UNSIGNED NOT NULL DEFAULT 0)"
+//查看临时表
+//const state = "SHOW columns FROM SalesSummary"
+//删除临时表
+//const state = "DROP TABLE SalesSummary"
+//复制数据表，运行查出来的sql语句，修改表名之后执行就会创建一个新的数据表
+//const state = "show create table users"
 db.query(state).then((res)=>{
   console.log(res)
 })
