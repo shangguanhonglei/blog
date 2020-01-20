@@ -8,7 +8,7 @@ import { locale, i18n } from './i18n'
 import router from './router'
 Vue.config.productionTip = false
 import '@vnnox/novaui/libs/nova.css'
-Vue.use(NovaUI,{
+Vue.use(NovaUI, {
   lang: locale,
   locales: {
     ja: NovaUiJaLocale

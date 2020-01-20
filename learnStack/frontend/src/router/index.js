@@ -6,7 +6,7 @@ import Login from '../views/login/Index'
 import User from '../views/home/user/Index'
 import Main from '../views/home/Main'
 Vue.use(VueRouter)
-const routers = [
+const routes = [
   {
     path: '/',
     redirect: '/home/dashboard'
@@ -38,5 +38,5 @@ const routers = [
 
 export default new VueRouter({
   base: process.env.BASE_URL,
-  routers
+  routes
 })

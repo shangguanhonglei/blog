@@ -34,7 +34,7 @@ export class Model  {
     return this.Request(url,{
       method: 'get',
       params,
-       // `paramsSerializer` 是一个负责 `params` 序列化的函数
+      // `paramsSerializer` 是一个负责 `params` 序列化的函数
       // (e.g. https://www.npmjs.com/package/qs, http://api.jquery.com/jquery.param/)
       paramsSerializer(params) {
         return Qs.stringify(params, {arrayFormat: 'brackets',encode: true})

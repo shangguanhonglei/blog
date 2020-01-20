@@ -1,15 +1,15 @@
 <template>
   <div class="app-login">
-    {{name}}
+    <span>{{name}}</span>
   </div>
 </template>
 <script>
-  export default {
-    name: 'login',
-    data(){
-      return {
-        name: '登录'
-      }
+export default {
+  name: 'login',
+  data() {
+    return {
+      name: '登录'
     }
   }
+}
 </script>

@@ -1,10 +1,15 @@
 <template>
 <div class="app-register">
-  注册
+  <span>{{name}}</span>
 </div>
 </template>
 <script>
-  export default {
-    name: 'register'
+export default {
+  name: 'register',
+  data(){
+    return {
+      name: '注册'
+    }
   }
+}
 </script>

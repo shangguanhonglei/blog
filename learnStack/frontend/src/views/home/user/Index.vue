@@ -1,10 +1,15 @@
 <template>
   <div class="home-user">
-    用户
+    <span>{{name}}</span>
   </div>
 </template>
 <script>
-  export default {
-    name: 'user'
+export default {
+  name: 'user',
+  data(){
+    return {
+      name: '用户'
+    }
   }
+}
 </script>
