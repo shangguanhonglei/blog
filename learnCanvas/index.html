@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas</title>
+</head>
+
+<body>
+  <canvas id="canvas" width="200" height="200" style="border: 1px solid #000;"></canvas>
+  <div id="test" style="width: 100px; height: 100px;">test</div>
+</body>
+<script src="./fontmetrics.js"></script>
+<script>
+  var canvas = document.getElementById('canvas'),
+    context = canvas.getContext("2d");
+  var w = 200, h = 200, testtext = "this is a string 我和我的祖国";
+  canvas.style.font = "30px Times";
+  context.font = "30px Times";
+  var metrics = context.measureText(testtext);
+  var xstart = (w - metrics.width) / 2;
+  context.fontFamily = "Times";
+  context.fillStyle = "#99BBFF";
+  var width = metrics.bounds.maxx - metrics.bounds.minx
+  var height = metrics.ascent + metrics.descent
+  console.log(`width:${width},height:${height}`)
+  context.fillRect(xstart, h / 2 - metrics.ascent,width,height);
+  context.fillStyle = "grey";
+  context.fillText(testtext, xstart, h / 2);
+  var piexl = context.getImageData(100,100,1,1)
+  var test = document.getElementById('test')
+  var color = piexl.data
+  test.style.background = `rgba(${color[0]},${color[1]},${color[2]},${color[3]})`
+</script>
+
+</html>
