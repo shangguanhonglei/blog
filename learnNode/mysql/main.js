@@ -58,7 +58,7 @@ const db = require('./db')
 //查看临时表
 //const state = "SHOW columns FROM SalesSummary"
 //删除临时表
-//const state = "DROP TABLE SalesSummary"
+const state = "DROP TABLE users_clone"
 //复制数据表，运行查出来的sql语句，修改表名之后执行就会创建一个新的数据表
 //const state = "show create table users"
 db.query(state).then((res)=>{
