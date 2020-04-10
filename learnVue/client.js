@@ -1,11 +1,12 @@
-import Observer from './observer.js.js'
-import Compile from './compile.js.js'
+import Observer from './observer.js'
+import Compile from './compile.js'
 class Vue {
   /**
    * 构造函数
    * @param {*} options
    */
   constructor(options){
+    debugger
     var self = this
     this.data = options.data
     this.methods = options.methods

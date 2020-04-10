@@ -1,4 +1,4 @@
-import Publisher from './publisher.js.js'
+import Publisher from './publisher.js'
 class Subscribe{
   /**
    * 构造函数

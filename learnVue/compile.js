@@ -1,5 +1,5 @@
-import Tool from './tool.js.js'
-import Subscribe from './subscribe.js.js'
+import Tool from './tool.js'
+import Subscribe from './subscribe.js'
 class Compile {
   /**
    * 构造函数
