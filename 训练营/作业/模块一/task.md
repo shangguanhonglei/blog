@@ -1,0 +1,2 @@
+- 简答题
+1. 由于js是单线程语言，在遇到异步任务的时候不可能一直等待返回结果，所以就引入了异步的概念。Eventloop就是js的事件循环机制，其实就是一个队列用于处理js的异步任务，比如ajax、setTimeout、Promise、process.nextTick等。Web API处理完成之后就会将任务丢到队列中等候执行，任务又分为宏任务和微任务。宏任务包括ajax、setTimeout等，微任务包括Promise、process.nextTick。当执行遇到微任务时会将微任务队列中所有微任务按照顺序执行完成之后才会执行下一个宏任务
