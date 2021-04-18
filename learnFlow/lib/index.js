@@ -7,7 +7,7 @@ export const isTrue = function (a) {
 export const test = function (a) {
   return a + 1;
 };
-test('6');
+test(3);
 export default {
   add,
   isTrue

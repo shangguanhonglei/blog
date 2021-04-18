@@ -8,7 +8,7 @@ export const isTrue = function(a:boolean): boolean {
 export const test = function(a:number):number {
   return a+1
 }
-test('6')
+test(3)
 export default {
   add,
   isTrue
