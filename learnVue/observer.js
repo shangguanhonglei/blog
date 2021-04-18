@@ -1,5 +1,5 @@
-import Tool from './tool.js.js'
-import Publisher from './publisher.js.js'
+import Tool from './tool.js'
+import Publisher from './publisher.js'
 class Observer {
   constructor(data){
     //如果数据不是对象或者为空，则不进行监听
