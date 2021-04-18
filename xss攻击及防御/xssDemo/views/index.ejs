@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';"> -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <iframe src="http://www.baidu.com" frameborder="0"></iframe>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div><%- xss%></div>
+    <div><%- imageSrc%></div>
+    <img src="<%- imageSrc %>">
+  </body>
+</html>
+ 

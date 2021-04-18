@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo2</title>
+    <script src="./utils.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+
+<body>
+    <!-- <div>
+        html内容注入
+        <p class="content"></p>
+        <p>
+            <textarea class="txtArea"></textarea>
+        </p>
+        <p>
+            <button class="btn">提交内容</button>
+        </p>
+    </div> -->
+    <div>
+        html属性注入
+        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1560078285708&di=af4e8070ac0c49b8076ba3ce10d624ef&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F838ba61ea8d3fd1fc9c7b6853a4e251f94ca5f46.jpg">
+        <p>
+            <textarea class="txtArea2"></textarea>
+            <button class="btn2">提交图片地址</button>
+        </p>
+    </div>
+
+</body>
+<script>
+    // var $content = $('.content')
+    // var $txtArea = $('.txtArea')
+    // var $btn = $('.btn')
+    // var content = Tool.get('content')
+    // if (content) {
+    //     $content.html(content)
+    // }
+    // $btn.on('click', function () {
+    //     Tool.set('content', $txtArea.val())
+    // })
+
+    var $img = $('img')
+    var $txtArea2 = $('.txtArea2')
+    var $btn2 = $('.btn2')
+    var src = Tool.get('src')
+
+    if (src) {
+        $img.attr('src',src)
+    }
+    $btn2.on('click', function () {
+        Tool.set('src', $txtArea2.val())
+    })
+
+
+</script>
+
+</html>

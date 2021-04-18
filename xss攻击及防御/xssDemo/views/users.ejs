@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+</head>
+
+<body>
+    <h1><%= title %></h1>
+    <% users.forEach(function (user, index) { %>
+        <p>发表用户：<%- user.user %></p>
+        <p>新闻内容：<%- user.content %></p>
+        <p>
+          创建时间：<%- user.meta.createAt %>
+        </p>
+        <p>
+            修改时间：<%- user.meta.updateAt %>
+        </p>
+      <% }) %>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1><%= title %></h1>
+    
+    <form action="/data" method="post">
+        姓名<br />
+        <input type="text" name="user" /><br />
+        发表内容<br />
+        <textarea name="content"  cols="30" rows="10"></textarea><br />
+        <input type="submit" value="发表" />
+    </form>
+</body>
+
+</html>

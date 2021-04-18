@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo1</title>
+    <script src="./utils.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+</head>
+
+<body>
+    <h3>反射型xss测试：</h3>
+    <div class="content"></div>
+</body>
+<script>
+    var html = `<div><span></span></div><p></p>`
+    var parent =  document.createElement('div')
+    parent.innerHTML = html
+    parent.className = 'demo'
+    console.log(parent.querySelectorAll('*'))
+
+    var content = Tool.parse()
+    if (content && content.from) {
+        var tpl = `这个xss来自${content.from}`
+        $('.content').append(tpl)
+    }
+
+</script>
+
+</html>

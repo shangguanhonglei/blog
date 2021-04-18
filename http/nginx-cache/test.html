@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>this is data, and data is: <span id="data"></span></div>
+    <button id="btn">click me</button>
+</body>
+<script>
+    var index = 0
+    function doReques() {
+        document.getElementById('data').innerHTML = ''
+        fetch('/data', {
+            headers:{
+                'X-test-cache': index++
+            }
+        }).then((resp) => {
+            return resp.text()
+        }).then((text) => {
+            document.getElementById('data').innerHTML = text
+        })
+    }
+    document.getElementById('btn').addEventListener('click', function () {
+        doReques()
+    })
+</script>
+
+</html>
