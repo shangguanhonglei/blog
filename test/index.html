@@ -1,0 +1,42 @@
+<!--
+ * @Description: 
+ * @Author: tianleilei1
+ * @Date: 2021-07-02 15:37:10
+ * @LastEditTime: 2021-07-02 16:17:53
+ * @LastEditors: tianleilei1
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+</head>
+<body>
+  <div id="wrap">
+    
+  </div>
+</body>
+<script src="./template.js"></script>
+<script>
+  function insertHtml(){
+    var $wrap = document.getElementById('wrap')
+    var tpl = `<ul>
+      <% for(var i=0; i<users.length; i++) { %>
+        <li><a href="<%=users[i].url%>"><%=users[i].name%></a></li>
+      <% } %>
+    </ul>`
+    var users = [{
+      url: 'http://www.baidu.com',
+      name: '百度'
+    },{
+      url: 'http://www.google.com',
+      name: '谷歌'
+    }]
+    $wrap.innerHTML = template(tpl,{users})
+  }
+  insertHtml()
+  
+</script>
+</html>

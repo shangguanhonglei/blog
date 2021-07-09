@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>环境组件</title>
+
+</head>
+
+<body>
+<div id="wrapper" style="width: 266px; background-color: #000;"></div>
+</body>
+<script src="./fontmetrics.js"></script>
+<script src="./index.js"></script>
+<script>
+  function getCompAttr(options) {
+    var $wrapper = document.getElementById('wrapper')
+    var instance = new window.EnvironmentMonitor($wrapper)
+    instance.preview(options)
+  }
+  var options = {
+    width: 266,
+    height: 130,
+    scale: 1,
+    noise: true,
+    noiseUnit: 'dB',
+    temperature: true,
+    temperatureUnit: '°(C)',
+    airHumidity: true,
+    airHumidityUnit: "%RH",
+    airPressure: true,
+    airPressureUnit: 'bar',
+    windSpeed: true,
+    windSpeedUnit: 'km/h',
+    windDirection: true,
+    pmIIV: true,
+    pmIIVUnit: 'μg/m³',
+    pmX: true,
+    pmXUnit: 'μg/m³',
+    coⅡ: true,
+    coⅡUnit: 'ppm',
+    customLabel: {
+      "noise": "噪声：",
+      "temperature": "温度：",
+      "airHumidity": "气湿：",
+      "airPressure": "气压：",
+      "windSpeed": "风速：",
+      "windDirection": "风向：",
+      "pmIIV": "PM2.5：",
+      "pmX": "PM10：",
+      "coⅡ": "CO2："
+    },
+    labelFont: {
+      "fontFamily": "Microsoft YaHei",
+      "fontSize": 22,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FF0000"
+    },
+    valueFont: {
+      "fontFamily": "Microsoft YaHei",
+      "fontSize": 20,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FF0000"
+    },
+    unitFont: {
+      "fontFamily": "Microsoft YaHei",
+      "fontSize": 20,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FF0000"
+    },
+    contentFont: {
+      "fontFamily": "Microsoft YaHei",
+      "fontSize": 18,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FF0000"
+    },
+    content: '',
+    alignment: 1,
+    pageDuration: 2,
+    duration: 10,
+    playMode: 1,
+    speedPixel: 160,
+    speedType: 1,
+    speedGear: 3
+  }
+  getCompAttr(options)
+</script>
+
+</html>

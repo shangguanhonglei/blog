@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图像灰度化处理</title>
+</head>
+<body style="display: flex;">
+  <img src="./color.jpg" width="width:658px;">
+  <canvas id="myCanvas" width="658" height="438"></canvas>
+</body>
+<script>
+  (
+    function draw(){
+      const $canvas = document.getElementById('myCanvas')
+      const ctx = $canvas.getContext('2d')
+      const img = new Image()
+      img.src = 'color.jpg'
+      img.onload = function(){
+        ctx.drawImage(img,0,0)
+        const canvasData = ctx.getImageData(0,0,$canvas.width,$canvas.height)
+        console.log(canvasData)
+        const data = canvasData.data
+        for(let i = 0; i< data.length; i = i + 4) {
+          const r = data[i]
+          const g = data[i + 1]
+          const b = data[i + 2]
+          const gray = 0.299 * r + 0.587 * g + 0.144 * b
+          data[i] = gray
+          data[i + 1] = gray
+          data[i + 2] = gray
+          data[i + 3] = 150
+        }
+        ctx.putImageData(canvasData,0,0)
+      }
+    }
+  )()
+</script>
+</html>

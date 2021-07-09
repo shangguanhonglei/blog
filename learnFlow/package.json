@@ -4,7 +4,7 @@
   "description": "学习flow静态js文件类型检测",
   "main": "index.js",
   "scripts": {
-    "build": "babel src/ -d lib/",
+    "build": "babel src/ -d lib/", //去掉注解
     "prepublish": "npm run build",
     "flow": "flow"
   },

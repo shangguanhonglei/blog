@@ -1,0 +1,180 @@
+.icon-blizzard {
+  background-position: 0 -110px;
+  width: 126px;
+  height: 108px;
+}
+.icon-cloudy {
+  background-position: 0 -440px;
+  width: 126px;
+  height: 108px;
+}
+.icon-dust {
+  background-position: -128px 0;
+  width: 126px;
+  height: 108px;
+}
+.icon-duststorm {
+  background-position: -128px -110px;
+  width: 126px;
+  height: 108px;
+}
+.icon-foggy {
+  background-position: 0 -220px;
+  width: 126px;
+  height: 108px;
+}
+.icon-haze {
+  background-position: -128px -220px;
+  width: 126px;
+  height: 108px;
+}
+.icon-heavyrain {
+  background-position: -256px 0;
+  width: 126px;
+  height: 108px;
+}
+.icon-heavysnow {
+  background-position: -256px -110px;
+  width: 126px;
+  height: 108px;
+}
+.icon-heavystorm {
+  background-position: 0 -330px;
+  width: 126px;
+  height: 108px;
+}
+.icon-icerain {
+  background-position: -256px -220px;
+  width: 126px;
+  height: 108px;
+}
+.icon-lightrain {
+  background-position: -128px -330px;
+  width: 126px;
+  height: 108px;
+}
+.icon-lightsnow {
+  background-position: -384px 0;
+  width: 126px;
+  height: 108px;
+}
+.icon-moderaterain {
+  background-position: -384px -110px;
+  width: 126px;
+  height: 108px;
+}
+.icon-moderatesnow {
+  background-position: -256px -330px;
+  width: 126px;
+  height: 108px;
+}
+.icon-overcast {
+  background-position: 0 0;
+  width: 126px;
+  height: 108px;
+}
+.icon-sand {
+  background-position: -384px -220px;
+  width: 126px;
+  height: 108px;
+}
+.icon-severestorm {
+  background-position: -128px -440px;
+  width: 126px;
+  height: 108px;
+}
+.icon-shower {
+  background-position: -384px -330px;
+  width: 126px;
+  height: 108px;
+}
+.icon-sleet {
+  background-position: -256px -440px;
+  width: 126px;
+  height: 108px;
+}
+.icon-snowflurry {
+  background-position: -512px 0;
+  width: 126px;
+  height: 108px;
+}
+.icon-stduststorm {
+  background-position: -512px -110px;
+  width: 126px;
+  height: 108px;
+}
+.icon-storm {
+  background-position: 0 -550px;
+  width: 126px;
+  height: 108px;
+}
+.icon-sunny {
+  background-position: -512px -220px;
+  width: 126px;
+  height: 108px;
+}
+.icon-thundershower {
+  background-position: -128px -550px;
+  width: 126px;
+  height: 108px;
+}
+.icon-thundershowerhail {
+  background-position: -384px -440px;
+  width: 126px;
+  height: 108px;
+}
+.icon-temp {
+  background-position: -512px -330px;
+  width: 23px;
+  height: 34px;
+}
+.icon-templimit {
+  background-position: -256px -550px;
+  width: 21px;
+  height: 37px;
+}
+.icon-wind {
+  background-position: -279px -550px;
+  width: 31px;
+  height: 31px;
+}
+.icon-storm {
+  background-position: 0 -550px;
+  width: 126px;
+  height: 108px;
+}
+
+
+/* images/index.png?20181212155042 */
+.icon-blizzard,
+.icon-cloudy,
+.icon-dust,
+.icon-duststorm,
+.icon-foggy,
+.icon-haze,
+.icon-heavyrain,
+.icon-heavysnow,
+.icon-heavystorm,
+.icon-icerain,
+.icon-lightrain,
+.icon-lightsnow,
+.icon-moderaterain,
+.icon-moderatesnow,
+.icon-overcast,
+.icon-sand,
+.icon-severestorm,
+.icon-shower,
+.icon-sleet,
+.icon-snowflurry,
+.icon-stduststorm,
+.icon-sunny,
+.icon-thundershower,
+.icon-thundershowerhail,
+.icon-temp,
+.icon-templimit,
+.icon-wind,
+.icon-storm{
+background-image: url(images/icon.png?20181212155042);
+}
+
+.css_stamp{ content:"20181212155042";}
